@@ -1,9 +1,11 @@
 #include "memory.h"
 #include "bitmap.h"
+#include "heap.h"
 
 void memory_init(void)
 {
     bitmap_init();
+    heap_init();
 }
 
 unsigned long memory_alloc_page(void)

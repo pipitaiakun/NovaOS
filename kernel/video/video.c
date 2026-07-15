@@ -2,5 +2,22 @@
 
 void video_init(void)
 {
-    /* Akan diisi setelah NovaOS berhasil boot */
+}
+
+void video_clear(void)
+{
+}
+
+void video_putchar(char c)
+{
+    (void)c;
+}
+
+void video_write(const char *str)
+{
+    while (*str)
+    {
+        video_putchar(*str);
+        str++;
+    }
 }

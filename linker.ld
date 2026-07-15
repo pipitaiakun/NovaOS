@@ -1,26 +1,28 @@
-ENTRY(kernel_main)
+ENTRY(_start)
 
 SECTIONS
 {
     . = 1M;
 
-    .text :
+    .text ALIGN(4K)
     {
+        *(.multiboot)
         *(.text*)
     }
 
-    .rodata :
+    .rodata ALIGN(4K)
     {
         *(.rodata*)
     }
 
-    .data :
+    .data ALIGN(4K)
     {
         *(.data*)
     }
 
-    .bss :
+    .bss ALIGN(4K)
     {
+        *(COMMON)
         *(.bss*)
     }
 }
