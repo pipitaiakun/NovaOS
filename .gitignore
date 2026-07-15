@@ -1,5 +1,14 @@
 build/
+dist/
+
 *.o
-*.img
+*.elf
 *.iso
-*.bin
+
+test_bitmap
+test_console
+test_heap
+test_kprintf
+test_scheduler
+test_syscall
+test_vfs
